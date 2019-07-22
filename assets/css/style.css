@@ -1,0 +1,191 @@
+
+body{
+
+    background-image: url("../images/background1");
+    width:960px;
+    height:600px;
+    color: yellow;
+    
+    font-family: 'Pacifico', cursive;
+
+}
+
+#wins{
+    
+    color:yellow;
+    background-color:green;
+}
+
+#lose{
+    
+    color:yellow;
+    background-color: rgb(54, 11, 11);
+    
+   
+}
+.module {
+    background-image: url(big-image.jpg);
+  }
+
+.diamond{
+    height: 150px;
+    width: 175px;
+    margin:25px 55px 25px 0px;
+    float:center;
+    background-color: antiquewhite;
+    border-color: white;
+    padding:10px;
+    cursor: pointer;
+}
+
+
+.ribio{
+    height: 150px;
+    width: 175px;
+    margin:25px 55px 25px 0px;
+    float:center;
+    background-color: antiquewhite;
+    border-color: white;
+    padding:10px;
+    cursor: pointer;
+}
+
+
+#tenor{
+    height: 100px;
+    width: 125px;
+    margin:25px 135px 25px 0px;
+    float:center;
+    border-radius: 40%;
+    padding:10px;
+    cursor: pointer;
+}
+
+
+
+#crystal{
+    height: 100px;
+    width: 125px;
+    margin:25px 135px 25px 0px;
+    float:center;
+    border-radius: 40%;
+    padding:10px;
+    cursor:pointer;
+}
+
+#diamond{
+    height: 100px;
+    width: 125px;
+    margin:25px 135px 25px 0px;
+    float:center;
+    border-radius: 40%;
+    padding:10px;
+    cursor:pointer;
+}
+
+
+#ribio{
+    height: 100px;
+    width: 125px;
+    margin:25px 135px 25px 0px;
+    float:center;
+    border-radius: 60%;
+    padding:10px;
+    cursor: pointer;
+
+
+
+}
+
+#main{
+    font-size: 20pt;
+    font-weight: bold;
+    text-align: center;
+    float:center;
+    position:fixed;
+    bottom:0px;
+    right:100px;
+    cursor: -webkit-grab; cursor: grab;
+    
+}
+#main2{
+  
+    position:absolute;
+    bottom:60px;
+
+    right:0px;
+ 
+}
+  h2{
+      position:fixed;
+      bottom: 20px;
+      left:30px;
+      font-family: 'Pacifico', cursive;
+
+      color:yellow;
+      
+  }
+  h5{
+    position:fixed;
+    bottom: 260px;
+    right:0px;
+    
+    font-family: 'Pacifico', cursive;
+
+   
+
+}
+h4{
+    position:fixed;
+    right:650px;
+    bottom: 80px;
+    font-family: 'Pacifico', cursive;
+  
+   
+}
+      
+    
+     h {
+        position: absolute;
+        top:100px;
+        left:200px;
+        font-family: 'Londrina Shadow', cursive;
+        text-transform: uppercase;
+        font-size: 4em;
+        letter-spacing: 4px;
+        overflow: hidden;
+        background: linear-gradient(90deg, rgb(0, 0, 0), #fff,yellowgreen);
+        background-repeat: no-repeat;
+        background-size: 80%;
+        animation: animate 3s linear infinite;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: rgba(255, 255, 255, 0);
+      }
+      
+      @keyframes animate {
+        0% {
+          background-position: -500%;
+        }
+        100% {
+          background-position: 500%;
+        }
+      }
+      #card1{
+          
+          position: fixed;
+          top: 100px;
+          right:0px;
+          font-size: 32px;
+          color:yellowgreen;
+
+          
+      }
+      #card2{
+       
+        position: fixed;
+        top: 300px;
+        right:0px;
+        font-size: 32px;
+        color:yellowgreen;
+    }
+    
