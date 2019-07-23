@@ -1,8 +1,18 @@
+
+
+//onclick audio
+var bleep = new Audio();
+bleep.src = "assets/images/light_bulb_breaking.aac";
+
+var bleep1 = new Audio();
+
+bleep.src = "assets/images/beep1.mp3";
+
 //crystals
 var crystal = {
-    diamond:
+    blue:
     {
-        name: "diamond",
+        name: "blue",
         value: 0
     },
 
@@ -27,6 +37,9 @@ var crystal = {
 var currentScore = 0;
 var targetScore = 0;
 
+
+
+
 var lose = 0;
 var win = 0;
 
@@ -35,24 +48,26 @@ var getRandom = function(min, max){
     return Math.floor((Math.random() * max-min +1) + min);
 };
 
-//the initialize game function
+//the initialize game 
 var initGame = function(){
     //initialize current score to 0
         currentScore = 0;
+       
         //get random number for the target score
-        targetNumber = getRandom(19,100);
+        targetNumber = getRandom(10,100);
         console.log(targetNumber);
         $(".targetScore").html(targetNumber);
         $(".userScore").html(currentScore);
+        
 };
 
 //get random number for each crystal
-    crystal.diamond.value = getRandom(1, 12);
+    crystal.blue.value = getRandom(1, 12);
     crystal.ribio.value = getRandom(1, 12);
     crystal.tenor.value = getRandom(1, 12);
     crystal.crystal.value = getRandom(1,12);
 
-    console.log("diamond:" + crystal.diamond.value);
+    console.log("blue:" + crystal.blue.value);
     console.log("ribio:" + crystal.ribio.value);
     console.log("tenor:" + crystal.tenor.value);
     console.log("crystal:" + crystal.crystal.value);
@@ -61,6 +76,7 @@ var initGame = function(){
     var crystalValue = function(crystal){
         currentScore = currentScore + crystal.value;
         $("#userScore").html(currentScore);
+        console.log(currentScore);
 
         checkWins();
     }
@@ -69,7 +85,14 @@ var initGame = function(){
 var checkWins = function(){
    // var lose = 0;
     if(currentScore > targetNumber){
-        alert("you lost");
+      
+        $("#userScore").html(currentScore);
+        $("#screen").html("You lost");
+        alert("You lost")
+              
+       
+        console.log(screen);
+        
         console.log("you lost");
         lose++;
         $("#losses").html(lose);
@@ -78,8 +101,11 @@ var checkWins = function(){
     }
 else if(currentScore === targetNumber){
    // var win = 0;
-    
+   $("#screen").html("You won")
     console.log("you won");
+    alert("You win")
+    
+
     win++;
     $("#win").html(win);
     //restart game
@@ -90,8 +116,8 @@ else if(currentScore === targetNumber){
 
 initGame();
 
-    $("#diamond").on("click", function(){
-    crystalValue(crystal.diamond);
+    $("#blue").on("click", function(){
+    crystalValue(crystal.blue);
     console.log(crystalValue);
 });
 
@@ -110,10 +136,41 @@ $("#crystal").on("click", function(){
     console.log(crystalValue);
 });
 
-var bleep = new Audio();
-bleep.src = "assets/images/light_bulb_breaking.aac";
+var currentCallback;
 
-var bleep1 = new Audio();
-bleep.src = "assets/images/beep1.mp3";
+// override default browser alert
+window.alert = function(msg, callback){
+  $('.message').text(msg);
+  $('.customAlert').css('animation', 'fadeIn 0.3s linear');
+  $('.customAlert').css('display', 'inline');
+  setTimeout(function(){
+    $('.customAlert').css('animation', 'none');
+  }, 300);
+  currentCallback = callback;
+}
 
-
+$(function(){
+  
+  // add listener for when our confirmation button is clicked
+	$('.confirmButton').click(function(){
+    $('.customAlert').css('animation', 'fadeOut 0.3s linear');
+    setTimeout(function(){
+     $('.customAlert').css('animation', 'none');
+		$('.customAlert').css('display', 'none');
+    }, 300);
+    currentCallback();
+  })
+  
+  $('.rab').click(function(){
+    alert("You will be given a random number at the start of the game.  There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.You win the game by matching your total score to the ramdomnumber, you lose the game if your total score goes above the random number.The value of each crystal is hidden from you until you click on it. Each time when the game starts,the game will change the values of each crystal.", function(){
+      console.log("Callback executed");
+    })
+  });
+  
+  // our custom alert box
+  setTimeout(function(){
+    alert('You will be given a random number at the start of the game.There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.You win the game by matching your total score to the ramdomnumber, you lose the game if your total score goes above the random number.The value of each crystal is hidden from you until you click on it. Each time when the game starts,the game will change the values of each crystal', function(){
+        console.log("Callback executed");
+      });
+  }, 500);
+});

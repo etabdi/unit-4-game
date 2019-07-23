@@ -27,7 +27,7 @@ body{
     background-image: url(big-image.jpg);
   }
 
-.diamond{
+.blue{
     height: 150px;
     width: 175px;
     margin:25px 55px 25px 0px;
@@ -73,7 +73,7 @@ body{
     cursor:pointer;
 }
 
-#diamond{
+#blue{
     height: 100px;
     width: 125px;
     margin:25px 135px 25px 0px;
@@ -180,6 +180,15 @@ h4{
 
           
       }
+      .card3{
+        width:300px;
+        height:300px;
+        position: fixed;
+        top: 100px;
+        left:140px;
+        font-size: 32px;
+        color:yellowgreen;}
+
       #card2{
        
         position: fixed;
@@ -191,3 +200,102 @@ h4{
     #audio{
         display:"none";
    }
+   .instruction{
+    width: 50%;
+    padding: 10px;
+    background-color: rgb(5, 22, 15);
+    color: white;
+    font-size: 25px;
+    box-sizing: border-box;
+   }
+
+ @import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+
+body{
+  background: darken(#04B486, 30%);
+  font-family: 'Noto Sans', 'Helvetica';
+  color:white;
+}
+
+.customAlert{
+	
+  display: none;
+  position: fixed;
+  max-width: 75%;
+  min-width: 250px !important;
+  min-height: 20%;
+  height: 200px;
+  right:20%;
+  top: 50%;
+  color:white;
+  padding: 20px;
+  font-size: 20px;
+
+  box-sizing: border-box;
+  margin-left: -12.5%;
+  margin-top: -5.2%;
+  background: #088A68;
+  text-align: center;
+  
+  @media all and (max-width: 1300px){
+    .message{
+      font-size: 14px !important;
+    }
+    input[type='button']{
+      height: 15% !important;
+    }
+  
+  
+  .message{
+    padding: 5px;
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: justify;
+  }
+    
+  input[type='button']{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 50%;
+    height: 36px;
+    margin-top: -45px;
+    margin-left: -25%;
+    outline: 0;
+    border: 0;
+    background: #04B486;
+    color: white;
+    &:hover{
+      transition: 0.3s;
+      cursor: pointer;
+    	background: lighten(#04B486, 5%);  
+    }
+  } 
+     
+.rab{
+  width: 200px;
+  height: 30px;
+  outline: 0;
+  border: 0;
+  color: white;
+  background: darken(#04B486, 5%);
+}
+      
+@keyframes fadeOut{
+	from{
+  	opacity: 1;
+  } 
+  to{
+    opacity: 0;
+  }
+}
+    
+@keyframes fadeIn{
+	from{
+  	opacity: 0;
+  } 
+  to{
+    opacity: 1;
+  }
+}}}
