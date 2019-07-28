@@ -1,7 +1,6 @@
-# unit-4-gameThe player will have to guess the answer, just like in Word Guess. This time, though, the player will guess with numbers instead of letters.
+# unit-4-gameThe 
 
 
-Here's how the app works:
 
 
 There will be four crystals displayed as buttons on the page.
