@@ -1,153 +1,106 @@
 
 
-//onclick audio
-var bleep = new Audio();
-bleep.src = "assets/images/light_bulb_breaking.aac";
 
-var bleep1 = new Audio();
+//crystals<script>
+        $(document).ready(function () {
 
-bleep.src = "assets/images/beep1.mp3";
-
-//crystals
-var crystal = {
-    blue:
-    {
-        name: "blue",
-        value: 0
-    },
-
-    ribio:
-    {
-        name: "ribio",
-        value: 0
-    },
-    tenor:
-    {
-        name: "tenor",
-        value: 0
-    },
-    crystal:
-    {
-        name: "crystal",
-        value:0
-    }
-};
-
-//variables
-var currentScore = 0;
-var targetScore = 0;
-
-
-
-
-var lose = 0;
-var win = 0;
-
-//random number function
-var getRandom = function(min, max){
-    return Math.floor((Math.random() * max-min +1) + min);
-};
-
-//the initialize game 
-var initGame = function(){
-    //initialize current score to 0
-        currentScore = 0;
-       
-        //get random number for the target score
-        targetNumber = getRandom(10,100);
-        console.log(targetNumber);
-        $(".targetScore").html(targetNumber);
-        $(".userScore").html(currentScore);
-        
-};
-
-//get random number for each crystal
-    crystal.blue.value = getRandom(1, 12);
-    crystal.ribio.value = getRandom(1, 12);
-    crystal.tenor.value = getRandom(1, 12);
-    crystal.crystal.value = getRandom(1,12);
-
-    console.log("blue:" + crystal.blue.value);
-    console.log("ribio:" + crystal.ribio.value);
-    console.log("tenor:" + crystal.tenor.value);
-    console.log("crystal:" + crystal.crystal.value);
-
-    //function to add the value of the crystals to the current score
-    var crystalValue = function(crystal){
-        currentScore = currentScore + crystal.value;
-        $("#userScore").html(currentScore);
-        console.log(currentScore);
-
-        checkWins();
-    }
-
-//check to see if you have matched the target score thereby winning ...else losing
-var checkWins = function(){
-   // var lose = 0;
-    if(currentScore > targetNumber){
+          //All variables
       
-        $("#userScore").html(currentScore);
-        $("#screen").html("You lost");
-        alert("You lost")
-              
-       
-        console.log(screen);
+          var targetNumber;
+          var currentScore;
+          var win = 0;
+            console.log(win)
+          var lose = 0;
+             console.log(lose);
+          var isOver;
         
-        console.log("you lost");
-        lose++;
-        $("#losses").html(lose);
-        //restart game
-        initGame();
-    }
-else if(currentScore === targetNumber){
-   // var win = 0;
-   $("#screen").html("You won")
-    console.log("you won");
-    alert("You win")
+ 
+  function initializeGame() {
+              targetNumber = Math.floor(Math.random() * (80)) + 19;
+              currentScore = 0;                         
+              $("#computer-score").text(targetNumber);
+              $("#user-score").text(currentScore);
+          }
+   initializeGame();
+
+          $("#btn-1").on("click", function () {
+          $("#btn-1").attr("number-value", Math.floor(Math.random() * 10) + 1);
+          btnValue = ($(this).attr("number-value"));
+           btnValue = parseInt(btnValue);
+          currentScore += btnValue;
+          $("#user-score").text(currentScore);
+          checkWins();
+          console.log(currentScore)
+              })
+                // onclick functon generate rundome number for cristals
+   $("#btn-2").on("click", function () {
+           $("#btn-2").attr("number-value", Math.floor(Math.random() * 10) + 1);
+              
+          btnValue = ($(this).attr("number-value"));
+          btnValue = parseInt(btnValue);
+          currentScore += btnValue;
+          $("#user-score").text(currentScore);
+          checkWins();
+           console.log(currentScore)
+                      });
+                      
+  $("#btn-3").on("click", function () {
+          $("#btn-3").attr("number-value", Math.floor(Math.random() * 10) + 1);  
+               btnValue = ($(this).attr("number-value"));
+          btnValue = parseInt(btnValue);
+           currentScore += btnValue;
+       $("#user-score").text(currentScore);
+          checkWins();
+       console.log(currentScore)
+                  })
+   $("#btn-4").on("click", function () {
+              $("#btn-4").attr("number-value", Math.floor(Math.random() * 10) + 1);
+              btnValue = ($(this).attr("number-value"));
+                   btnValue = parseInt(btnValue);
+               currentScore += btnValue;
+              $("#user-score").text(currentScore);
+               checkWins();
+                console.log(currentScore)
+      })
+
+ var checkWins = function(){
+ // var lose = 0;
+  if (currentScore > targetNumber){
+      $("#screen").html("You lost");
+      alert("You lost")
+         
+      console.log(screen);
+      
+      console.log("you lost");
+      lose++;
+      $("#losses").html(lose);
+      //restart game
+      reset();
     
-
-    win++;
-    $("#win").html(win);
-    //restart game
-    initGame();
-    }
+  }
+else if(currentScore === targetNumber){
+      // var win = 0;
+      $("#screen").html("You won")
+          console.log("you won");
+          alert("You win")
+                  win++;
+          $("#win").html(win);
+          //restart game
+          reset();
+          }
 };
-
-
-initGame();
-
-    $("#blue").on("click", function(){
-    crystalValue(crystal.blue);
-    console.log(crystalValue);
-});
-
-$("#tenor").on("click", function(){
-    crystalValue(crystal.tenor);
-    console.log(crystalValue);
-});
-
-$("#ribio").on("click", function(){
-    crystalValue(crystal.ribio);
-    console.log(crystalValue);
-});
-
-$("#crystal").on("click", function(){
-    crystalValue(crystal.crystal);
-    console.log(crystalValue);
-});
-
+function reset () {
+  //initialize current score to 0
+      currentScore = 0;
+      //get random number for the target score
+      targetNumber = Math.floor(Math.random() * (100)) + 1;
+      console.log(targetNumber);
+      $("#computer-score").html(targetNumber);;
+      $("#user-score").html(currentScore)}
+        });
+      
 var currentCallback;
 
-// override default browser alert
-window.alert = function(msg, callback){
-  $('.message').text(msg);
-  $('.customAlert').css('animation', 'fadeIn 0.3s linear');
-  $('.customAlert').css('display', 'inline');
-  setTimeout(function(){
-    $('.customAlert').css('animation', 'none');
-  }, 300);
-  currentCallback = callback;
-}
 
 $(function(){
   
@@ -174,3 +127,11 @@ $(function(){
       });
   }, 500);
 });
+
+//onclick audio
+var bleep = new Audio();
+bleep.src = "assets/images/light_bulb_breaking.aac";
+
+var bleep1 = new Audio();
+
+bleep.src = "assets/images/beep1.mp3";
