@@ -1,19 +1,11 @@
+    $(document).ready(function () {
 
-
-
-//crystals<script>
-        $(document).ready(function () {
-
-          //All variables
-      
-          var targetNumber;
+         var targetNumber;
           var currentScore;
           var win = 0;
-            console.log(win)
+          console.log(win)
           var lose = 0;
-             console.log(lose);
-          var isOver;
-        
+          console.log(lose);         
  
   function initializeGame() {
               targetNumber = Math.floor(Math.random() * (80)) + 19;
@@ -41,8 +33,7 @@
           currentScore += btnValue;
           $("#user-score").text(currentScore);
           checkWins();
-           console.log(currentScore)
-                      });
+           console.log(currentScore) });
                       
   $("#btn-3").on("click", function () {
           $("#btn-3").attr("number-value", Math.floor(Math.random() * 10) + 1);  
@@ -86,8 +77,7 @@ else if(currentScore === targetNumber){
                   win++;
           $("#win").html(win);
           //restart game
-          reset();
-          }
+          reset(); }
 };
 function reset () {
   //initialize current score to 0
