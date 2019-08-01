@@ -19,98 +19,55 @@
 </head>
 
 <body>
-
-    
-    <div class="row">
-        <div class="col-md-2" style="background-color:white;visibility:hidden;">
-        <div id="music" ><embed src="assets/images/Our-Mountain_v003.mp3" autostart=true loop=false></div>                                
-</div>
-    
-
-            
-        <div id="background">
-            <h class="text-center">
-                <strong>Crystals-Collector-Game!</strong>
-            </h>
-        </div>
-
-    
-    
-          </div>
-          <div class='customAlert'>
-                <p class='message'></p>
-                  <input type='button' class='confirmButton' value='Ok'>
+        <div class="jumbotron">
+                <h1 class="display-4">Crystals-Collector-Game!</h1>
+                
+                <hr class="my-4">
+         <div id="images" >   
+                <img src="assets/images/blue.gif" alt="blue" id="btn-1" href="#" onmousedown="bleep.play()">    
+                <img src="assets/images/white tenor.gif" alt="crystal" id="btn-2" href="#" onmousedown="bleep.play()">
+               <img src="assets/images/ribio.gif" alt="tenor" id="btn-3" href="#" onmousedown="bleep.play()">
+               <img src="assets/images/tenor.gif" alt="ribio" id="btn-4" href="#" onmousedown="bleep.play()">
+                               
+            </div>  
+            <div class="rab">
+                <a  class="btn btn-primary btn-lg" href="#" role="button">'Rules of the Game</a>
               </div>
-                
-    </div>
-       
- <div class="col-lg-10" style="position:absolute;bottom:70px; right:10px" >
-                <!--crystal images-->
-             <div class="card-header text-center"  >
-                     <img src="assets/images/blue.gif" alt="blue" id="btn-1" href="#" onmousedown="bleep.play()">    
-                         <img src="assets/images/white tenor.gif" alt="crystal" id="btn-2" href="#" onmousedown="bleep.play()">
-                        <img src="assets/images/ribio.gif" alt="tenor" id="btn-3" href="#" onmousedown="bleep.play()">
-                        <img src="assets/images/tenor.gif" alt="ribio" id="btn-4" href="#" onmousedown="bleep.play()">
-                                        
+            </div> 
+              <div class="winLoss">
+
+                  <strong>
+                        
+                            <div class="points">Win:</div>
+                            <div class="points" id = "win"></div>
+                        
+                       
+                    <hr/>
+                      
+                            <th class="points" >losses</th>
+                            <div class="points" id = "losses"></div>
+                  
+                            <hr/>
+                        </div>
+             <div id="result">
                     
-                     </div>
-            </div>
+                            
+                            <div id="computer-score"></div>
+                            <hr/>
+                  
+                        
+                        <div class="score" id="user-score"></div>
         
-        
-<div class="col-lg-3" id="main2">
-           
-            <!--Wins-->
-            <div class="col-lg-1" style="position:fixed;top:0px;right:10px;">
-                <div class="card">
-                    <div class="card-header text-center" id = "wins">Wins</div>
-                    <div class="card-body text-center" id = "win">
-                       
-                    </div>
-                </div>
-            </div>
-            <!--Losses-->
-            <div class="col-lg-1" style="position:fixed;top:0px;right:120px;">
-                <div class="card">
-                    <div class="card-header text-center" id = "lose">Losses</div>
-                    <div class="card-body text-center" id = "losses">
-                       
-                    </div>
-                </div>
-            </div>
-        
-                
-         </div>   
-            <hr/>
-    
-    <div id="result" >
-        <div class="col-lg-2" id="card1" >
-            <div class="card">
-                <div class="card-header text-center" id = "target" style="background-color:rgb(10, 1, 63);">Target Score</div>
-                <div class="card-body text-center">
-                    <div id="computer-score">
-                    </div>
-                </div>
-            </div>
+                    </strong>  
+                  
+               
         </div>
-        <hr/>
-        <!--User Score-->
-        <div class="col-lg-2" id="card2">
-            <div class="card">
-                <div class="card-header text-center" id = "score" style="background-color:rgb(10, 1, 63)">Your Score</div>
-                <div class="card-body text-center" id = "user-score">
-                </div>
-            </div>
-        </div>
- <div>
-        <div>
-        <input type='button' class='rab' value='Rules of the Game'>
-      </div>
-       <!--Crystals-->
-      
-    <!-- jQuery-->
+
+
+          <!-- jQuery-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-        <script src="assets/javascript/game.js"></script>
+    crossorigin="anonymous"></script>
+    <script src="assets/javascript/game.js"></script>
 </body>
 
-</html> -->
+

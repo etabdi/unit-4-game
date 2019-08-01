@@ -1,6 +1,4 @@
 
-
-
 //crystals<script>
         $(document).ready(function () {
 
@@ -18,47 +16,53 @@
   function initializeGame() {
               targetNumber = Math.floor(Math.random() * (80)) + 19;
               currentScore = 0;                         
-              $("#computer-score").text(targetNumber);
-              $("#user-score").text(currentScore);
+              $("#computer-score").text("Target Score:"+" "+targetNumber);
+              $("#user-score").text("Your Score"+""+currentScore);
+              $("#btn-1").attr("number-value", Math.floor(Math.random() * 10) + 3);
+              $("#btn-2").attr("number-value", Math.floor(Math.random() * 10) + 6);
+              $("#btn-3").attr("number-value", Math.floor(Math.random() * 10) + 8); 
+              $("#btn-4").attr("number-value", Math.floor(Math.random() * 10) + 2);
+
+              
           }
    initializeGame();
 
           $("#btn-1").on("click", function () {
-          $("#btn-1").attr("number-value", Math.floor(Math.random() * 10) + 1);
+         
           btnValue = ($(this).attr("number-value"));
            btnValue = parseInt(btnValue);
           currentScore += btnValue;
-          $("#user-score").text(currentScore);
+          $("#user-score").text("Your Score:"+""+currentScore);
           checkWins();
           console.log(currentScore)
               })
                 // onclick functon generate rundome number for cristals
    $("#btn-2").on("click", function () {
-           $("#btn-2").attr("number-value", Math.floor(Math.random() * 10) + 1);
+          
               
           btnValue = ($(this).attr("number-value"));
           btnValue = parseInt(btnValue);
           currentScore += btnValue;
-          $("#user-score").text(currentScore);
+          $("#user-score").text("Your Score:"+""+currentScore);
           checkWins();
            console.log(currentScore)
                       });
                       
   $("#btn-3").on("click", function () {
-          $("#btn-3").attr("number-value", Math.floor(Math.random() * 10) + 1);  
+          
                btnValue = ($(this).attr("number-value"));
           btnValue = parseInt(btnValue);
            currentScore += btnValue;
-       $("#user-score").text(currentScore);
+       $("#user-score").text("Your Score:"+""+currentScore);
           checkWins();
        console.log(currentScore)
                   })
    $("#btn-4").on("click", function () {
-              $("#btn-4").attr("number-value", Math.floor(Math.random() * 10) + 1);
+             
               btnValue = ($(this).attr("number-value"));
                    btnValue = parseInt(btnValue);
                currentScore += btnValue;
-              $("#user-score").text(currentScore);
+              $("#user-score").text("Your Score:"+""+currentScore);
                checkWins();
                 console.log(currentScore)
       })
@@ -94,9 +98,14 @@ function reset () {
       currentScore = 0;
       //get random number for the target score
       targetNumber = Math.floor(Math.random() * (100)) + 1;
+              $("#btn-1").attr("number-value", Math.floor(Math.random() * 10) + 3);
+              $("#btn-2").attr("number-value", Math.floor(Math.random() * 10) + 6);
+              $("#btn-3").attr("number-value", Math.floor(Math.random() * 10) + 8); 
+              $("#btn-4").attr("number-value", Math.floor(Math.random() * 10) + 2);
+
       console.log(targetNumber);
-      $("#computer-score").html(targetNumber);;
-      $("#user-score").html(currentScore)}
+      $("#computer-score").html("Target Score:"+""+targetNumber);;
+      $("#user-score").html("Your Score:"+""+currentScore)}
         });
       
 var currentCallback;
