@@ -14,7 +14,7 @@
         
  
   function initializeGame() {
-              targetNumber = Math.floor(Math.random() * (80)) + 19;
+              targetNumber = Math.floor(Math.random() * (50)) + 19;
               currentScore = 0;                         
               $("#computer-score").text("Target Score:"+" "+targetNumber);
               $("#user-score").text("Your Score"+""+currentScore);
@@ -77,7 +77,7 @@
       
       console.log("you lost");
       lose++;
-      $("#losses").html(lose);
+      $("#losses").html("losses:"+" "+""+lose);
       //restart game
       reset();
     
@@ -88,7 +88,7 @@ else if(currentScore === targetNumber){
           console.log("you won");
           alert("You win")
                   win++;
-          $("#win").html(win);
+          $("#win").html("Win:"+" "+win);
           //restart game
           reset();
           }
