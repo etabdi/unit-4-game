@@ -1,4 +1,5 @@
 html, body {
+  border-block-color: black;
 
 }
 
@@ -50,5 +51,6 @@ html, body {
 #images{
 
   float:center;
-  margin:0px 0px 0px 150px 
+  margin:0px 0px 0px 150px;
+  cursor: pointer;
 }
