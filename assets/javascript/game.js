@@ -88,7 +88,7 @@ else if(currentScore === targetNumber){
           console.log("you won");
           alert("You win")
                   win++;
-          $("#win").html("Win:"+" "+win);
+          $("#win").html("Wins:"+" "+win);
           //restart game
           reset();
           }
