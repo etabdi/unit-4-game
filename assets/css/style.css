@@ -55,3 +55,77 @@ html, body {
   margin:0px 0px 0px 150px;
   cursor: pointer;
 }
+
+@media only screen and (max-width: 760px) {
+
+  html, body {
+    border-block-color: black;
+    height: 100%;
+    background-color: black;
+  
+  
+  }
+  
+  
+  #btn-1,
+  #btn-2,
+  #btn-3,
+  #btn-4 {
+      width:60%;
+      height:60%;
+      margin:10%;
+  }
+  
+     #result{
+    border:3px; 
+    border-style:solid;
+     padding: 1em;
+    float: right;;
+    left:60%;
+    width: 60%;
+   float: left;
+     background-color: rgb(233, 240, 232);
+     font-size: 14px;
+     color:rgb(11, 12, 11);
+     text-align: center;
+     clear: both;
+     margin: 1px;
+   }
+   .display-4{
+    font-size: 10%;
+    text-align: center;
+    font-style: italic;
+    font-style: inherit;
+  }
+  
+  
+   .winLoss{
+        border:3px; 
+        border-style:solid;
+        border-color:brown; 
+        padding: 1em;
+        width:200px;
+        top:0px;
+        background-color: rgb(248, 248, 242);
+        font-size: 22px;
+        color:green;
+        text-align:left;
+        float:left;
+      
+  
+      }
+      
+  #images{
+  
+    float:center;
+    margin:0px 0px 0px 150px;
+    cursor: pointer;
+  }
+
+  .btn{
+
+    margin: 20px;
+  }
+  
+ 
+  }
