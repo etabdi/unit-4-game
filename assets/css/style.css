@@ -1,5 +1,5 @@
 html, body {
-  border-block-color: black;
+background-color: black;
 
 }
 
@@ -55,6 +55,12 @@ html, body {
   margin:0px 0px 0px 150px;
   cursor: pointer;
 }
+.result{
+
+  border-style: dotted;
+  padding: 25px;
+  width:20%;
+}
 
 @media only screen and (max-width: 760px) {
 
@@ -65,17 +71,7 @@ html, body {
   
   
   }
-  
-  
-  #btn-1,
-  #btn-2,
-  #btn-3,
-  #btn-4 {
-      width:60%;
-      height:60%;
-      margin:10%;
-  }
-  
+   
      #result{
     border:3px; 
     border-style:solid;
@@ -95,7 +91,7 @@ html, body {
     font-size: 10%;
     text-align: center;
     font-style: italic;
-    font-style: inherit;
+    font-family: 'Chilanka', cursive;
   }
   
   
@@ -114,17 +110,17 @@ html, body {
       
   
       }
-      
-  #images{
-  
-    float:center;
-    margin:0px 0px 0px 150px;
-    cursor: pointer;
-  }
 
   .btn{
 
     margin: 20px;
+  }
+
+  .result{
+
+    border-style: dotted;
+    padding: 25px;
+    width:100%;
   }
   
  
